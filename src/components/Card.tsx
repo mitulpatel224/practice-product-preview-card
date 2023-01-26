@@ -4,11 +4,11 @@ import desk from "../assets/images/image-product-desktop.jpg";
 
 function Card() {
   return (
-    <div className="card-wrapper">
+    <article className="card-wrapper">
       <div className="card-header">
         <figure>
-          <img className="device-sm" src={mob} alt="product-image" />
-          <img className="device-lg" src={desk} alt="product-image" />
+          <img className="card-img device-sm" src={mob} alt="product-image" />
+          <img className="card-img device-lg" src={desk} alt="product-image" />
         </figure>
       </div>
       <div className="card-body">
@@ -26,7 +26,7 @@ function Card() {
         </div>
         <button className="call-to-action">Add to Cart</button>
       </div>
-    </div>
+    </article>
   );
 }
 
