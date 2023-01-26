@@ -18,13 +18,13 @@ function Card() {
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-      </div>
-      <div className="card-footer">
-        <div>
-          <span className="current-price">$149.99</span>{" "}
-          <del className="old-price">$169.99</del>
+        <div className="card-footer">
+          <div className="price-wrapper">
+            <span className="current-price">$149.99</span>{" "}
+            <del className="old-price">$169.99</del>
+          </div>
+          <button className="call-to-action">Add to Cart</button>
         </div>
-        <button className="call-to-action">Add to Cart</button>
       </div>
     </article>
   );
