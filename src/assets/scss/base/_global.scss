@@ -8,3 +8,20 @@ body {
   position: relative;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .device-sm {
+    display: block;
+  }
+  .device-lg {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .device-sm {
+    display: none;
+  }
+  .device-lg {
+    display: block;
+  }
+}
