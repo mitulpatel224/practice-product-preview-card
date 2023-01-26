@@ -1,0 +1,121 @@
+@use "../base/colors" as c;
+@use "../base/fonts" as f;
+
+$p20: 20px;
+.card-wrapper {
+  max-width: 350px;
+  max-height: 570px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  background-color: c.$white;
+  border-radius: 10px;
+  overflow: hidden;
+  .card-header {
+    flex-basis: 40%;
+    .card-img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .card-body {
+    flex-basis: 60%;
+    padding: $p20;
+    $mb: 10px;
+    .card-label {
+      letter-spacing: 2px;
+      display: inline-block;
+      margin-bottom: $mb;
+      text-transform: uppercase;
+      color: c.$darkGrayishBlue;
+    }
+    .card-title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 1px;
+      margin-bottom: $mb;
+      color: c.$veryDarkBlue;
+    }
+    .card-description {
+      color: c.$darkGrayishBlue;
+      letter-spacing: 0.5px;
+      margin-bottom: $mb;
+    }
+    .card-footer {
+      .price-wrapper {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .current-price {
+          font-size: 32px;
+          font-family: f.$font-title;
+          color: c.$darkCyan;
+        }
+        .old-price {
+          margin-left: 20px;
+          color: c.$darkGrayishBlue;
+        }
+      }
+      .call-to-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        width: 100%;
+        height: 50px;
+        color: c.$white;
+        border-radius: 10px;
+        font-weight: 500;
+        font-family: f.$font-body;
+        background-color: c.$darkCyan;
+        cursor: pointer;
+        -webkit-transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.5s ease-out;
+        -o-transition: background-color 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
+        gap: 10px;
+        &:hover {
+          background-color: c.$darkCyanActive;
+        }
+        &::before {
+          display: inline-block;
+          height: 15px;
+          width: 20px;
+          content: url("../../images/icon-cart.svg");
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-height: 450px;
+    max-width: 646px;
+    .card-header {
+      flex-basis: 50%;
+    }
+    .card-body {
+      flex-basis: 50%;
+      padding: 30px;
+      .card-label {
+        margin-bottom: 30px;
+      }
+      .card-title {
+        margin-bottom: 30px;
+      }
+      .card-description {
+        margin-bottom: 30px;
+      }
+      .card-footer {
+        .price-wrapper {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

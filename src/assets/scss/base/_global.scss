@@ -1,0 +1,48 @@
+@use "fonts" as f;
+@use "colors" as c;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-size: 14px;
+  font-family: f.$font-body;
+  background-color: c.$cream;
+}
+h1,
+h2,
+h3 {
+  font-family: f.$font-title;
+}
+
+#root,
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .device-sm {
+    display: block;
+  }
+  .device-lg {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .device-sm {
+    display: none;
+  }
+  .device-lg {
+    display: block;
+  }
+}
